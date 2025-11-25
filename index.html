@@ -1,9 +1,536 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BestSteps: Walking Leaderboard</title>
+    <link rel="icon" type="image/png" href="BestStepsIcon.png">
+    <meta name="description" content="Turn your steps into stories.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="BestSteps: Walking Leaderboard">
+    <meta property="og:description" content="Turn your steps into stories.">
+    <meta property="og:url" content="https://beststeps.app/">
+    <link rel="canonical" href="https://beststeps.app/">
+    <!-- TODO: Add image -->
+    <meta property="og:image" content="">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="BestSteps: Walking Leaderboard">
+    <meta name="twitter:description" content="Turn your steps into stories.">
+    <!-- TODO: Add image -->
+    <meta name="twitter:image" content="">
+    <meta name="robots" content="max-image-preview:large">    
 
-<body style="max-width: 650px; margin: 40px auto; font-family: sans-serif;">
-    <h1>BestSteps</h1>
-    <p>Coming soon...
-    </p>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #fff;
+            color: #000;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 0 0;
+        }
+
+        .main-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 80px;
+            padding: 0;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 72px;
+            width: 100%;
+            max-width: 745px;
+            padding: 0;
+        }
+
+        .hero-image {
+            width: 300px;
+            height: 615px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 24px;
+        }
+
+        .logo-section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .logo {
+            width: 48px;
+            height: 48px;
+            border-radius: 0;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .title {
+            font-size: 39px;
+            font-weight: 500;
+            line-height: 1.2em;
+            color: #000;
+            margin: 0;
+        }
+
+        .subtitle {
+            font-size: 19px;
+            font-weight: 500;
+            line-height: 1.3em;
+            color: #6c6f75;
+            margin: 0;
+        }
+
+        .download-button {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background-color: #000;
+            border-radius: 10px;
+            width: 240px;
+            height: 44px;
+            padding: 12px 2px 12px 0;
+            text-decoration: none;
+            color: #fff;
+            font-size: 15px;
+            font-weight: 400;
+            margin-top: 17px;
+        }
+
+        .download-button:hover {
+            opacity: 0.9;
+        }
+
+        .apple-logo {
+            width: 15px;
+            height: 17px;
+        }
+
+        .features-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 80px;
+            width: 100%;
+        }
+
+        .feature-row {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 72px;
+            width: 100%;
+        }
+
+        .feature {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            width: 320px;
+        }
+
+        .feature-image {
+            width: 300px;
+            height: 615px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        .feature-title {
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 1em;
+            color: #000;
+            text-align: center;
+            margin: 0;
+        }
+
+        .feature-description {
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 1.3em;
+            color: #9e8987;
+            text-align: center;
+            margin: 0;
+        }
+
+        .faq-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0;
+            width: 100%;
+        }
+
+        .faq-header {
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 72px;
+            width: 100%;
+            padding: 120px 240px 56px;
+        }
+
+        .faq-title {
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 1em;
+            color: #000;
+            text-align: center;
+            margin: 0;
+        }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 44px;
+            width: 620px;
+        }
+
+        .faq-item {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+            width: 100%;
+        }
+
+        .faq-question {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1em;
+            color: #000;
+            margin: 0;
+        }
+
+        .faq-answer {
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 1.3em;
+            color: #9e8987;
+            margin: 0;
+        }
+
+        .faq-image {
+            width: 100%;
+            height: 381px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .faq-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        @media (min-width: 810px) and (max-width: 1199.98px) {
+            .container {
+                max-width: 810px;
+                padding: 56px 0 0;
+            }
+
+            .hero {
+                flex-direction: column;
+                gap: 32px;
+                width: 100%;
+            }
+
+            .hero-content {
+                align-items: center;
+                gap: 28px;
+                width: 100%;
+            }
+
+            .logo-section {
+                align-items: center;
+                gap: 16px;
+            }
+
+            .logo {
+                width: 52px;
+                height: 52px;
+            }
+
+            .title {
+                text-align: center;
+                width: 274px;
+            }
+
+            .subtitle {
+                text-align: center;
+                width: auto;
+            }
+
+            .download-button {
+                height: 48px;
+            }
+
+            .feature-row {
+                flex-direction: column;
+                gap: 32px;
+            }
+
+            .feature {
+                gap: 24px;
+                width: 100%;
+            }
+
+            .faq-header {
+                padding: 56px 200px;
+            }
+
+            .faq-list {
+                width: 472px;
+            }
+
+            .faq-image {
+                height: 369px;
+            }
+        }
+
+        @media (max-width: 809.98px) {
+            .container {
+                max-width: 440px;
+                padding: 56px 0 0;
+            }
+
+            .main-section {
+                gap: 80px;
+            }
+
+            .hero {
+                flex-direction: column;
+                gap: 32px;
+                width: 100%;
+            }
+
+            .hero-content {
+                align-items: center;
+                gap: 32px;
+                width: 100%;
+            }
+
+            .logo-section {
+                align-items: center;
+                gap: 16px;
+                width: 100%;
+            }
+
+            .logo {
+                width: 54px;
+                height: 53px;
+            }
+
+            .title {
+                text-align: center;
+                width: 100%;
+            }
+
+            .subtitle {
+                text-align: center;
+                width: 289px;
+            }
+
+            .download-button {
+                height: 48px;
+            }
+
+            .feature-row {
+                flex-direction: column;
+                gap: 32px;
+            }
+
+            .feature {
+                gap: 24px;
+                width: 100%;
+                padding: 0 24px;
+            }
+
+            .feature-title,
+            .feature-description {
+                width: 300px;
+            }
+
+            .faq-header {
+                gap: 56px;
+                padding: 36px 0 0;
+            }
+
+            .faq-title {
+                width: 300px;
+            }
+
+            .faq-list {
+                width: 100%;
+            }
+
+            .faq-item {
+                align-items: center;
+                padding: 0 24px;
+            }
+
+            .faq-question,
+            .faq-answer {
+                width: 300px;
+                text-align: center;
+            }
+
+            .faq-image {
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main-section">
+            <!-- Hero Section -->
+            <div class="hero">
+                <div class="hero-image">
+                    <img src="https://framerusercontent.com/images/dX8N6mSvupTLkwgUUuyBMOajME.png?width=2105&height=4206" alt="A selection of ambient sounds such as gentle rain, ocean waves, forest birds, and brown noise.">
+                </div>
+                <div class="hero-content">
+                    <div class="logo-section">
+                        <div class="logo">
+                            <img src="BestStepsIcon.png" alt="BestSteps logo">
+                        </div>
+                        <div>
+                            <h1 class="title">Ambi</h1>
+                            <h2 class="subtitle">A simple ambient sound app built for focus and sleep.</h2>
+                        </div>
+                    </div>
+                    <a href="https://apps.apple.com/us/app/ambi-white-noise-sleep-sounds/id6753184615" target="_blank" rel="noopener" class="download-button">
+                        <div class="apple-logo">
+                            <img src="https://framerusercontent.com/images/d2AtvQ9pqKOdJ8J47EJUzjBFwdg.png?scale-down-to=1024&width=1724&height=2047" alt="Apple logo">
+                        </div>
+                        <span>Download for iOS</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Features Section -->
+            <div class="features-section">
+                <!-- Feature 1 -->
+                <div class="feature-row">
+                    <div class="feature">
+                        <h1 class="feature-title">Mix your perfect soundscape</h1>
+                        <h2 class="feature-description">Blend multiple sounds together with volume control for each individual sound</h2>
+                    </div>
+                    <div class="feature-image">
+                        <img src="https://framerusercontent.com/images/QCH8RToGYxzubcIi4KglHp2GZo.png?width=2105&height=4206" alt="Interface showing several ambient sounds—rain, wind, waves—each with its own volume slider and a main control playing them together.">
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-row">
+                    <div class="feature-image">
+                        <img src="https://framerusercontent.com/images/uUwz7xiCu0qM2X5HHfQeVXTk0Q.png?width=2105&height=4206" alt="A sound timer lets users choose how long the track plays, with options like indefinite, 5 min, 10 min, 30 min, 1 hr, or 10 hr.">
+                    </div>
+                    <div class="feature">
+                        <h1 class="feature-title">Play for as long<br>as you like</h1>
+                        <h2 class="feature-description">Set a timer or let your mix play through the night</h2>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-row">
+                    <div class="feature">
+                        <h1 class="feature-title">Available offline</h1>
+                        <h2 class="feature-description">All sounds play instantly—no connection required</h2>
+                    </div>
+                    <div class="feature-image">
+                        <img src="https://framerusercontent.com/images/7KpuVc56Rb1DmMJG1f915ju6bqI.png?width=2105&height=4206" alt="Airplane mode icon displayed, showing that the ambient sounds can play without an internet connection.">
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="faq-section">
+                <div class="faq-header">
+                    <h1 class="faq-title">Curious about Ambi?</h1>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <h1 class="faq-question">Is Ambi really free?</h1>
+                            <h2 class="faq-answer">Yes. No ads, no subscriptions, no data collection. Just the sounds.</h2>
+                        </div>
+                        <div class="faq-item">
+                            <h1 class="faq-question">Can I use Ambi without internet?</h1>
+                            <h2 class="faq-answer">Yep. Once you've downloaded the app, all sounds are stored on your device so it keeps working offline—great for flights or low-signal places.</h2>
+                        </div>
+                        <div class="faq-item">
+                            <h1 class="faq-question">Does Ambi drain battery?</h1>
+                            <h2 class="faq-answer">Not much. It's built for long, quiet hours. If you're sleeping, just lock the screen and let it play.</h2>
+                        </div>
+                        <div class="faq-item">
+                            <h1 class="faq-question">Does it work on iPad or Mac?</h1>
+                            <h2 class="faq-answer">For now, it's iPhone-only. A wider version may come once it feels right.</h2>
+                        </div>
+                        <div class="faq-item">
+                            <h1 class="faq-question">Who made Ambi?</h1>
+                            <h2 class="faq-answer">Just one person who likes calm things and simple design. I built Ambi for myself first, then shared it because others seemed to need it too.</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-image">
+                    <img src="https://framerusercontent.com/images/zXjun7nDkOpFuQZKBYNSESPEmQ.png?width=7280&height=2342" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
-
 </html>
