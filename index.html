@@ -259,6 +259,13 @@
             align-items: center;
             gap: 0;
             width: 100%;
+            max-width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .faq-section-desktop {
+            display: flex;
         }
 
         .faq-image {
@@ -348,10 +355,15 @@
                 width: 100%;
             }
 
+            .hero-image {
+                order: 2;
+            }
+
             .hero-content {
                 align-items: center;
                 gap: 32px;
                 width: 100%;
+                order: 1;
             }
 
             .logo-section {
@@ -388,11 +400,25 @@
                 gap: 24px;
                 width: 100%;
                 padding: 0 24px;
+                align-items: center !important;
             }
 
             .feature-title,
             .feature-description {
                 width: 300px;
+                text-align: center !important;
+            }
+
+            .feature-row:nth-child(2) .feature {
+                order: 1;
+            }
+
+            .feature-row:nth-child(2) .feature-image {
+                order: 2;
+            }
+
+            .faq-section-desktop {
+                display: flex;
             }
 
             .faq-image {
@@ -433,8 +459,8 @@
                 <!-- Feature 1 -->
                 <div class="feature-row">
                     <div class="feature">
-                        <h1 class="feature-title">Mix your perfect soundscape</h1>
-                        <h2 class="feature-description">Blend multiple sounds together with volume control for each individual sound</h2>
+                        <h1 class="feature-title">Bragging rights included</h1>
+                        <h2 class="feature-description">Share instantly with your friends.</h2>
                     </div>
                     <div class="feature-image">
                         <img src="https://framerusercontent.com/images/QCH8RToGYxzubcIi4KglHp2GZo.png?width=2105&height=4206" alt="Interface showing several ambient sounds—rain, wind, waves—each with its own volume slider and a main control playing them together.">
@@ -447,8 +473,8 @@
                         <img src="https://framerusercontent.com/images/uUwz7xiCu0qM2X5HHfQeVXTk0Q.png?width=2105&height=4206" alt="A sound timer lets users choose how long the track plays, with options like indefinite, 5 min, 10 min, 30 min, 1 hr, or 10 hr.">
                     </div>
                     <div class="feature">
-                        <h1 class="feature-title">Play for as long<br>as you like</h1>
-                        <h2 class="feature-description">Set a timer or let your mix play through the night</h2>
+                        <h1 class="feature-title">Relive your biggest days</h1>
+                        <h2 class="feature-description">Add photos and notes to make the walk your own.</h2>
                     </div>
                 </div>
 
@@ -457,7 +483,7 @@
     </div>
 
     <!-- Footer Gradient -->
-    <div class="faq-section">
+    <div class="faq-section faq-section-desktop">
         <div class="faq-image">
             <img src="https://framerusercontent.com/images/zXjun7nDkOpFuQZKBYNSESPEmQ.png?width=7280&height=2342" alt="">
         </div>
