@@ -24,7 +24,7 @@
     <meta name="twitter:image" content="">
     <meta name="robots" content="max-image-preview:large">    
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Bangers:wght@400&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -59,7 +59,7 @@
             display: flex;
             flex-direction: row;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
             gap: 72px;
             width: 100%;
             max-width: 745px;
@@ -107,10 +107,13 @@
         }
 
         .title {
-            font-size: 39px;
-            font-weight: 500;
+            font-family: 'Bangers', sans-serif;
+            font-size: 78px;
+            font-weight: 400;
             line-height: 1.2em;
-            color: #000;
+            color: #fff;
+            -webkit-text-stroke: 3px #000;
+            text-shadow: 2px 4px 0px #000;
             margin: 0;
         }
 
@@ -149,19 +152,24 @@
             height: 17px;
         }
 
+        .apple-logo img {
+            filter: brightness(0) invert(1);
+        }
+
         .features-section {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 80px;
             width: 100%;
+            max-width: 745px;
         }
 
         .feature-row {
             display: flex;
             flex-direction: row;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
             gap: 72px;
             width: 100%;
         }
@@ -206,62 +214,30 @@
             margin: 0;
         }
 
+        .feature-row:nth-child(1) .feature {
+            align-items: flex-start;
+        }
+
+        .feature-row:nth-child(1) .feature-title,
+        .feature-row:nth-child(1) .feature-description {
+            text-align: left;
+        }
+
+        .feature-row:nth-child(2) .feature {
+            align-items: flex-end;
+        }
+
+        .feature-row:nth-child(2) .feature-title,
+        .feature-row:nth-child(2) .feature-description {
+            text-align: right;
+        }
+
         .faq-section {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 0;
             width: 100%;
-        }
-
-        .faq-header {
-            background-color: #fff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 72px;
-            width: 100%;
-            padding: 120px 240px 56px;
-        }
-
-        .faq-title {
-            font-size: 32px;
-            font-weight: 500;
-            line-height: 1em;
-            color: #000;
-            text-align: center;
-            margin: 0;
-        }
-
-        .faq-list {
-            display: flex;
-            flex-direction: column;
-            gap: 44px;
-            width: 620px;
-        }
-
-        .faq-item {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 12px;
-            width: 100%;
-        }
-
-        .faq-question {
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 1em;
-            color: #000;
-            margin: 0;
-        }
-
-        .faq-answer {
-            font-size: 17px;
-            font-weight: 500;
-            line-height: 1.3em;
-            color: #9e8987;
-            margin: 0;
         }
 
         .faq-image {
@@ -328,14 +304,6 @@
             .feature {
                 gap: 24px;
                 width: 100%;
-            }
-
-            .faq-header {
-                padding: 56px 200px;
-            }
-
-            .faq-list {
-                width: 472px;
             }
 
             .faq-image {
@@ -406,30 +374,6 @@
                 width: 300px;
             }
 
-            .faq-header {
-                gap: 56px;
-                padding: 36px 0 0;
-            }
-
-            .faq-title {
-                width: 300px;
-            }
-
-            .faq-list {
-                width: 100%;
-            }
-
-            .faq-item {
-                align-items: center;
-                padding: 0 24px;
-            }
-
-            .faq-question,
-            .faq-answer {
-                width: 300px;
-                text-align: center;
-            }
-
             .faq-image {
                 height: auto;
             }
@@ -450,8 +394,8 @@
                             <img src="BestStepsIcon.png" alt="BestSteps logo">
                         </div>
                         <div>
-                            <h1 class="title">Ambi</h1>
-                            <h2 class="subtitle">A simple ambient sound app built for focus and sleep.</h2>
+                            <h1 class="title">Best Steps</h1>
+                            <h2 class="subtitle">Turn your steps into stories.</h2>
                         </div>
                     </div>
                     <a href="https://apps.apple.com/us/app/ambi-white-noise-sleep-sounds/id6753184615" target="_blank" rel="noopener" class="download-button">
@@ -487,49 +431,14 @@
                     </div>
                 </div>
 
-                <!-- Feature 3 -->
-                <div class="feature-row">
-                    <div class="feature">
-                        <h1 class="feature-title">Available offline</h1>
-                        <h2 class="feature-description">All sounds play instantly—no connection required</h2>
-                    </div>
-                    <div class="feature-image">
-                        <img src="https://framerusercontent.com/images/7KpuVc56Rb1DmMJG1f915ju6bqI.png?width=2105&height=4206" alt="Airplane mode icon displayed, showing that the ambient sounds can play without an internet connection.">
-                    </div>
-                </div>
             </div>
+        </div>
+    </div>
 
-            <!-- FAQ Section -->
-            <div class="faq-section">
-                <div class="faq-header">
-                    <h1 class="faq-title">Curious about Ambi?</h1>
-                    <div class="faq-list">
-                        <div class="faq-item">
-                            <h1 class="faq-question">Is Ambi really free?</h1>
-                            <h2 class="faq-answer">Yes. No ads, no subscriptions, no data collection. Just the sounds.</h2>
-                        </div>
-                        <div class="faq-item">
-                            <h1 class="faq-question">Can I use Ambi without internet?</h1>
-                            <h2 class="faq-answer">Yep. Once you've downloaded the app, all sounds are stored on your device so it keeps working offline—great for flights or low-signal places.</h2>
-                        </div>
-                        <div class="faq-item">
-                            <h1 class="faq-question">Does Ambi drain battery?</h1>
-                            <h2 class="faq-answer">Not much. It's built for long, quiet hours. If you're sleeping, just lock the screen and let it play.</h2>
-                        </div>
-                        <div class="faq-item">
-                            <h1 class="faq-question">Does it work on iPad or Mac?</h1>
-                            <h2 class="faq-answer">For now, it's iPhone-only. A wider version may come once it feels right.</h2>
-                        </div>
-                        <div class="faq-item">
-                            <h1 class="faq-question">Who made Ambi?</h1>
-                            <h2 class="faq-answer">Just one person who likes calm things and simple design. I built Ambi for myself first, then shared it because others seemed to need it too.</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="faq-image">
-                    <img src="https://framerusercontent.com/images/zXjun7nDkOpFuQZKBYNSESPEmQ.png?width=7280&height=2342" alt="">
-                </div>
-            </div>
+    <!-- Footer Gradient -->
+    <div class="faq-section">
+        <div class="faq-image">
+            <img src="https://framerusercontent.com/images/zXjun7nDkOpFuQZKBYNSESPEmQ.png?width=7280&height=2342" alt="">
         </div>
     </div>
 </body>
