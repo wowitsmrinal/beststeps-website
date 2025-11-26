@@ -252,6 +252,20 @@
             text-align: right;
         }
 
+        /* Large screens: vertically center the main content */
+        @media (min-width: 1200px) {
+            body {
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .container {
+                width: 100%;
+            }
+        }
+
         @media (min-width: 810px) and (max-width: 1199.98px) {
             .container {
                 max-width: 810px;
