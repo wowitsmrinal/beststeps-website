@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BestSteps: Walking Leaderboard</title>
-    <link rel="icon" type="image/png" href="beststeps-logo.png">
-    <meta name="description" content="Turn steps into stories.">
+    <link rel="icon" type="image/png" href="beststeps-logo.avif">
+    <meta name="description" content="BestSteps is an iOS app that turns yours steps into stories.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Open Graph / Facebook -->
@@ -14,15 +14,19 @@
     <meta property="og:description" content="Turn steps into stories.">
     <meta property="og:url" content="https://beststeps.app/">
     <link rel="canonical" href="https://beststeps.app/">
-    <meta property="og:image" content="https://beststeps.app/share.png">
+    <meta property="og:image" content="https://beststeps.app/share.avif">
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="BestSteps: Walking Leaderboard">
     <meta name="twitter:description" content="Turn steps into stories.">
-    <meta name="twitter:image" content="https://beststeps.app/share.png">
+    <meta name="twitter:image" content="https://beststeps.app/share.avif">
     <meta name="robots" content="max-image-preview:large">    
 
-    <link href="https://fonts.googleapis.com/css2?family=Bangers:wght@400&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bangers:wght@400&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers:wght@400&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers:wght@400&display=swap">
+    </noscript>
     <style>
         * {
             margin: 0;
@@ -38,7 +42,7 @@
 
         body {
             font-family: 'Bangers', sans-serif;
-            background-image: url('bgredweb.png');
+            background-image: url('bgredweb.avif');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -277,7 +281,7 @@
         <div class="main-section">
             <div class="hero">
                 <div class="hero-image">
-                    <img src="phone1.png" alt="BestSteps app screenshot">
+                    <img src="phone1.avif" alt="BestSteps app screenshot" fetchpriority="high" decoding="async">
                 </div>
                 <div class="hero-content">
                     <div class="logo-section">
