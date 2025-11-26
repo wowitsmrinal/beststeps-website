@@ -52,7 +52,7 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 80px 0 0;
+            padding: 0;
         }
 
         .main-section {
@@ -70,13 +70,13 @@
             justify-content: space-between;
             gap: 72px;
             width: 100%;
-            max-width: 745px;
+            max-width: 900px;
             padding: 0;
         }
 
         .hero-image {
-            width: 300px;
-            height: 615px;
+            width: 450px;
+            height: 922px;
             position: relative;
             overflow: visible;
         }
@@ -127,14 +127,10 @@
         }
 
         .title {
-            font-family: 'Bangers', sans-serif;
-            font-size: 64px;
-            font-weight: 400;
-            line-height: 1.2em;
-            color: #fff;
-            -webkit-text-stroke: 3px #000;
-            text-shadow: 1px 3px 0px #000;
-            margin: 0;
+            display: block;
+            height: auto;
+            width: 50%;
+            margin: 0 0 16px 0;
             opacity: 0;
             transform: perspective(1200px) scale(0.9);
             animation: fadeInScale 0.6s ease-out forwards;
@@ -149,6 +145,7 @@
             letter-spacing: 0.03em;
             color: #fff;
             margin: 0;
+            white-space: nowrap;
             opacity: 0;
             transform: perspective(1200px) scale(0.9);
             animation: fadeInScale 0.6s ease-out 0.1s forwards;
@@ -166,13 +163,11 @@
             height: 73px;
             padding: 12px 2px 12px 0;
             text-decoration: none;
-            color: #fff;
+            color: #000;
             font-family: 'Bangers', sans-serif;
             font-size: 25px;
             font-weight: 400;
-            letter-spacing: 0.05em;
-            -webkit-text-stroke: 1px #000;
-            text-shadow: 1px 2px 0px #000;
+            letter-spacing: 0.0em;
             opacity: 1;
             transform: rotate(0deg);
         }
@@ -326,8 +321,7 @@
             }
 
             .title {
-                text-align: center;
-                width: 274px;
+                width: 70%;
             }
 
             .subtitle {
@@ -372,6 +366,8 @@
 
             .hero-image {
                 order: 2;
+                width: 250px;
+                height: 512px;
             }
 
             .hero-image img {
@@ -397,13 +393,15 @@
             }
 
             .title {
-                text-align: center;
-                width: 100%;
+                width: 70%;
+                margin: 0 auto 16px auto;
             }
 
             .subtitle {
                 text-align: center;
                 width: 289px;
+                margin: 0 auto;
+                font-size: 32px;
             }
 
             .download-button {
@@ -457,7 +455,7 @@
                 <div class="hero-content">
                     <div class="logo-section">
                         <div>
-                            <h1 class="title">Best Steps</h1>
+                            <img src="beststeps-name.png" alt="BestSteps" class="title">
                             <h2 class="subtitle">Turn steps into stories.</h2>
                         </div>
                     </div>
