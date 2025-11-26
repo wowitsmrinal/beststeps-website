@@ -22,7 +22,7 @@
     <meta name="twitter:image" content="https://beststeps.app/share.png">
     <meta name="robots" content="max-image-preview:large">    
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Bangers:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers:wght@400&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -103,18 +103,6 @@
             gap: 12px;
         }
 
-        .logo {
-            width: 48px;
-            height: 48px;
-            border-radius: 0;
-        }
-
-        .logo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
         @keyframes fadeInScale {
             from {
                 opacity: 0;
@@ -176,82 +164,6 @@
             opacity: 0.9;
         }
 
-        .features-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 80px;
-            width: 100%;
-            max-width: 745px;
-        }
-
-        .feature-row {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            gap: 72px;
-            width: 100%;
-        }
-
-        .feature {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-            width: 320px;
-        }
-
-        .feature-image {
-            width: 300px;
-            height: 615px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .feature-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            display: block;
-        }
-
-        .feature-title {
-            font-size: 32px;
-            font-weight: 500;
-            line-height: 1em;
-            color: #000;
-            text-align: center;
-            margin: 0;
-        }
-
-        .feature-description {
-            font-size: 17px;
-            font-weight: 500;
-            line-height: 1.3em;
-            color: #9e8987;
-            text-align: center;
-            margin: 0;
-        }
-
-        .feature-row:nth-child(1) .feature {
-            align-items: flex-start;
-        }
-
-        .feature-row:nth-child(1) .feature-title,
-        .feature-row:nth-child(1) .feature-description {
-            text-align: left;
-        }
-
-        .feature-row:nth-child(2) .feature {
-            align-items: flex-end;
-        }
-
-        .feature-row:nth-child(2) .feature-title,
-        .feature-row:nth-child(2) .feature-description {
-            text-align: right;
-        }
-
         /* Large screens: vertically center the main content */
         @media (min-width: 1200px) {
             body {
@@ -289,11 +201,6 @@
                 gap: 16px;
             }
 
-            .logo {
-                width: 52px;
-                height: 52px;
-            }
-
             .title {
                 width: 70%;
             }
@@ -305,16 +212,6 @@
 
             .download-button {
                 height: 48px;
-            }
-
-            .feature-row {
-                flex-direction: column;
-                gap: 32px;
-            }
-
-            .feature {
-                gap: 24px;
-                width: 100%;
             }
         }
 
@@ -357,11 +254,6 @@
                 width: 100%;
             }
 
-            .logo {
-                width: 54px;
-                height: 53px;
-            }
-
             .title {
                 width: 70%;
                 margin: 0 auto 16px auto;
@@ -376,32 +268,6 @@
 
             .download-button {
                 height: 56px;
-            }
-
-            .feature-row {
-                flex-direction: column;
-                gap: 32px;
-            }
-
-            .feature {
-                gap: 24px;
-                width: 100%;
-                padding: 0 24px;
-                align-items: center !important;
-            }
-
-            .feature-title,
-            .feature-description {
-                width: 300px;
-                text-align: center !important;
-            }
-
-            .feature-row:nth-child(2) .feature {
-                order: 1;
-            }
-
-            .feature-row:nth-child(2) .feature-image {
-                order: 2;
             }
         }
     </style>
