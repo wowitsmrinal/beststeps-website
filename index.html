@@ -42,8 +42,8 @@
 
         body {
             font-family: 'Bangers', sans-serif;
-            background-color: #000;
-            color: #fff;
+            background-color: #fff;
+            color: #000;
             line-height: 1.5;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
@@ -295,8 +295,18 @@
         }
 
         @media (min-width: 810px) {
+            .hero-image {
+                height: 800px;
+            }
+
             .social-section {
                 padding: 80px 16px 40px;
+            }
+        }
+
+        @media (min-width: 810px) and (max-width: 3200px) {
+            .social-section {
+                padding-top: 32px;
             }
         }
 
