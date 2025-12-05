@@ -175,6 +175,13 @@
             opacity: 0.9;
         }
 
+        .social-section {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 40px 16px 40px;
+        }
+
         /* Large screens: full-height layout */
         @media (min-width: 1200px) {
             body {
@@ -189,7 +196,7 @@
         @media (min-width: 810px) and (max-width: 1199.98px) {
             .container {
                 max-width: 810px;
-                padding: 56px 0 0;
+                padding: 28px 0 0;
             }
 
             .hero {
@@ -226,7 +233,7 @@
         @media (max-width: 809.98px) {
             .container {
                 max-width: 440px;
-                padding: 56px 0 80px;
+                padding: 56px 0 16px;
             }
 
             .main-section {
@@ -279,14 +286,8 @@
             }
 
             .social-section {
-                padding: 18px 32px;
+                padding: 0px 32px;
             }
-        }
-
-        .social-section {
-            width: 100%;
-            display: flex;
-            justify-content: center;
         }
 
         @media (min-width: 810px) {
@@ -309,6 +310,20 @@
 
         .instagram-wrapper iframe {
             border-radius: 24px !important;
+        }
+
+        .credits-footer {
+            background-color: #fff;
+            padding: 24px 16px 32px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .credits-footer img {
+            max-width: 360px;
+            width: 80%;
+            height: auto;
+            display: block;
         }
     </style>
 </head>
@@ -348,6 +363,9 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="credits-footer">
+        <img src="credits.avif" alt="Credits">
     </div>
     <script async src="https://www.instagram.com/embed.js"></script>
 </body>
